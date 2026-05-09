@@ -306,6 +306,35 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .step-title { font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 8px; }
 .step-content p { font-size: 0.95rem; color: var(--slate); }
 
+/* ===== SERVICE AREAS ===== */
+.service-areas { padding: 60px 0; background: var(--warm-white); position: relative; overflow: hidden; }
+.areas-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.areas-map-wrap {
+    border-radius: 16px; overflow: hidden; height: 500px;
+    box-shadow: 0 12px 40px rgba(42,42,46,0.1); border: 1px solid var(--border);
+}
+.areas-list-wrap { padding: 8px 0; }
+.areas-list-title {
+    font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 16px;
+    color: var(--charcoal); padding-bottom: 8px; border-bottom: 2px solid var(--pink-light);
+}
+.areas-list-title--surrounding { margin-top: 28px; border-bottom-color: var(--blue-light); }
+.areas-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.area-chip {
+    display: inline-block; padding: 8px 16px; font-size: 0.85rem; font-weight: 500;
+    background: var(--cream); border: 1.5px solid var(--border); border-radius: 100px;
+    color: var(--slate); transition: all 0.3s var(--ease); cursor: pointer;
+}
+.area-chip:hover {
+    background: var(--pink-pale); border-color: var(--pink); color: var(--charcoal);
+    transform: translateY(-2px); box-shadow: 0 4px 12px rgba(201,160,170,0.2);
+}
+.area-chip--city { border-color: var(--blue-light); }
+.area-chip--city:hover {
+    background: var(--blue-pale); border-color: var(--blue); color: var(--charcoal);
+    box-shadow: 0 4px 12px rgba(143,164,196,0.2);
+}
+
 /* ===== TESTIMONIALS ===== */
 .testimonials { padding: 60px 0; position: relative; overflow: hidden; }
 .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
@@ -382,6 +411,8 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 
     .contact-inner { grid-template-columns: 1fr; gap: 48px; }
     .testimonial-grid { grid-template-columns: 1fr; }
+    .areas-layout { grid-template-columns: 1fr; }
+    .areas-map-wrap { height: 400px; }
     .footer-top { grid-template-columns: 1fr; gap: 40px; }
 }
 
