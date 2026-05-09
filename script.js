@@ -87,4 +87,48 @@ document.addEventListener('DOMContentLoaded', () => {
             heroDots.style.transform = `translate(${x * -10}px, ${y * -10}px)`;
         }, { passive: true });
     }
+
+    // ===== Chat widget toggle =====
+    const chatButton    = document.getElementById('chat-button');
+    const chatPopup     = document.getElementById('chat-popup');
+    const chatClose     = document.getElementById('chat-close');
+    const chatIconOpen  = document.getElementById('chat-icon-open');
+    const chatIconClose = document.getElementById('chat-icon-close');
+
+    let chatOpen = false;
+    let autoShownOnce = false;
+
+    function openChat() {
+        chatOpen = true;
+        chatPopup.classList.add('chat-popup--visible');
+        chatButton.classList.add('is-open');
+        chatButton.setAttribute('aria-expanded', 'true');
+        chatIconOpen.style.display  = 'none';
+        chatIconClose.style.display = 'block';
+    }
+
+    function closeChat() {
+        chatOpen = false;
+        chatPopup.classList.remove('chat-popup--visible');
+        chatButton.classList.remove('is-open');
+        chatButton.setAttribute('aria-expanded', 'false');
+        chatIconOpen.style.display  = 'block';
+        chatIconClose.style.display = 'none';
+    }
+
+    chatButton.addEventListener('click', () => {
+        chatOpen ? closeChat() : openChat();
+    });
+
+    chatClose.addEventListener('click', () => closeChat());
+
+    // Auto-show the popup once after 4 seconds
+    setTimeout(() => {
+        if (!autoShownOnce && !chatOpen) {
+            autoShownOnce = true;
+            openChat();
+            // Auto-dismiss after 8 more seconds if the user ignores it
+            setTimeout(() => { if (chatOpen) closeChat(); }, 8000);
+        }
+    }, 4000);
 });

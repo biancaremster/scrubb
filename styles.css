@@ -208,6 +208,13 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .chat-popup {
     background: white; padding: 16px 36px 16px 16px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     display: flex; align-items: center; gap: 12px; position: relative; max-width: 280px;
+    opacity: 0; pointer-events: none;
+    transform: translateY(12px) scale(0.96);
+    transition: opacity 0.3s var(--ease), transform 0.3s var(--ease-bounce);
+}
+.chat-popup--visible {
+    opacity: 1; pointer-events: all;
+    transform: translateY(0) scale(1);
 }
 .chat-popup::after {
     content: ''; position: absolute; bottom: -8px; right: 24px; border-width: 8px 8px 0;
@@ -219,10 +226,22 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .chat-close:hover { color: var(--charcoal); }
 .chat-button {
     width: 60px; height: 60px; border-radius: 50%; background: var(--conversion); color: white; display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4); transition: transform 0.3s var(--ease-bounce); cursor: pointer; border: none;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4); transition: transform 0.3s var(--ease-bounce), background 0.3s; cursor: pointer; border: none;
+    position: relative;
 }
+.chat-button::before {
+    content: ''; position: absolute; inset: -4px; border-radius: 50%;
+    border: 2px solid rgba(16, 185, 129, 0.5);
+    animation: chat-pulse 2s ease-in-out infinite;
+}
+.chat-button.is-open::before { animation: none; border-color: transparent; }
+.chat-button.is-open { background: var(--slate); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
 .chat-button:hover { transform: scale(1.08); }
-.chat-button svg { width: 28px; height: 28px; }
+.chat-button svg { width: 28px; height: 28px; transition: opacity 0.2s, transform 0.2s; }
+@keyframes chat-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.15); opacity: 0; }
+}
 
 /* ===== EDITORIAL HEADERS ===== */
 .editorial-header { margin-bottom: 28px; }
