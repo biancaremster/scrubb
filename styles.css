@@ -33,6 +33,32 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
+/* ===== BACKGROUND DECORATIONS ===== */
+.bg-decoration {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+}
+.bg-decoration--dots {
+    background-image: radial-gradient(var(--blue-light) 2px, transparent 2px);
+    background-size: 16px 16px;
+    opacity: 0.6;
+}
+.bg-decoration--circle {
+    border-radius: 50%;
+    background: var(--pink-pale);
+    opacity: 0.7;
+}
+.bg-decoration--circle-blue {
+    border-radius: 50%;
+    background: var(--blue-pale);
+    opacity: 0.6;
+}
+.bg-decoration--outline {
+    border: 1px solid var(--blue-light);
+    opacity: 0.7;
+}
+
 /* ===== GRAIN OVERLAY ===== */
 .grain-overlay {
     position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.035;
