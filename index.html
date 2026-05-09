@@ -53,55 +53,74 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="hero-decoration hero-decoration--circle" aria-hidden="true"></div>
-            <div class="hero-decoration hero-decoration--dots" aria-hidden="true"></div>
-            <div class="bg-decoration bg-decoration--circle-blue" style="top: -200px; left: -200px; width: 600px; height: 600px; opacity: 0.5;" aria-hidden="true"></div>
-            <div class="bg-decoration bg-decoration--dots" style="top: 20%; right: 2%; width: 200px; height: 200px;" aria-hidden="true"></div>
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <div class="hero-eyebrow anim-fade-up">
-                        <span class="eyebrow-line"></span>
-                        <span class="eyebrow-text">Professional Cleaning Services</span>
+        <section id="hero" class="hero hero--landing">
+            
+            <div class="container hero-grid hero-grid--landing">
+                <div class="hero-content hero-content--landing">
+                    <div class="promo-pill anim-fade-up">
+                        <span class="promo-icon">%</span> 20% OFF First Cleaning!
                     </div>
-                    <h1 class="hero-title anim-fade-up" style="--delay: 0.1s">
-                        Spaces That<br>
-                        <em class="hero-title-accent">Sparkle</em> With<br>
-                        Character
+                    
+                    <h1 class="hero-title hero-title--landing anim-fade-up" style="--delay: 0.1s">
+                        Transform Your Space<br>
+                        from Chaos to <em class="hero-title-accent">Clean</em><br>
+                        in Hours
                     </h1>
-                    <p class="hero-body anim-fade-up" style="--delay: 0.2s">
-                        We believe a clean space should feel alive — not sterile. Scrubb ATX merges meticulous 
-                        attention to detail with a playful charm that makes your home or office 
-                        radiate warmth and personality. We also offer expert decluttering and organization services to complete the transformation.
+                    
+                    <p class="hero-body hero-body--landing anim-fade-up" style="--delay: 0.2s">
+                        Professional cleaning services in Austin, TX. <strong>Let us handle the chores for your home or business.</strong>
                     </p>
-                    <div class="hero-actions anim-fade-up" style="--delay: 0.3s">
-                        <a href="#contact" id="hero-cta-primary" class="btn btn--primary">Get Your Estimate</a>
-                        <a href="#services" id="hero-cta-secondary" class="btn btn--ghost">Our Services →</a>
-                    </div>
-                    <div class="hero-stats anim-fade-up" style="--delay: 0.4s">
-                        <div class="stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Happy Homes</span>
+                    
+                    <div class="hero-features-grid anim-fade-up" style="--delay: 0.3s">
+                        <div class="hero-feature-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            Bonded & Insured
                         </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat">
-                            <span class="stat-number">4.9★</span>
-                            <span class="stat-label">Average Rating</span>
+                        <div class="hero-feature-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            Trained Professionals
                         </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat">
-                            <span class="stat-number">7 yrs</span>
-                            <span class="stat-label">In Business</span>
+                        <div class="hero-feature-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                            Eco-Friendly Products
+                        </div>
+                        <div class="hero-feature-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            100% Satisfaction
                         </div>
                     </div>
                 </div>
-                <div class="hero-visual anim-fade-in-right">
-                    <div class="hero-img-frame">
-                        <div class="hero-img-shadow" aria-hidden="true"></div>
-                        <img src="hero.png" alt="Beautifully clean modern living room with muted pink and blue tones" class="hero-img">
-                        <div class="hero-img-badge" aria-hidden="true">
-                            <span>Est. 2026</span>
-                        </div>
+                
+                <div class="hero-form-container anim-fade-in-right">
+                    <div class="hero-form-card">
+                        <h2 class="form-card-title">Get Your 20% OFF First Cleaning</h2>
+                        <form id="hero-lead-form" class="lead-form" onsubmit="return false;">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="lead-first-name" class="lead-label">First Name <span class="required">*</span></label>
+                                    <input type="text" id="lead-first-name" class="lead-input" placeholder="First Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lead-last-name" class="lead-label">Last Name <span class="required">*</span></label>
+                                    <input type="text" id="lead-last-name" class="lead-input" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="lead-phone" class="lead-label">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="lead-phone" class="lead-input" placeholder="Phone Number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lead-email" class="lead-label">Email</label>
+                                    <input type="email" id="lead-email" class="lead-input" placeholder="Email Address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lead-message" class="lead-label">Details about your cleaning</label>
+                                <textarea id="lead-message" class="lead-input lead-textarea" rows="4" placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full btn--submit">Get My 20% Discount</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -456,6 +475,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-popup anim-fade-up">
+            <img src="logo.png" alt="Avatar" class="chat-avatar">
+            <div class="chat-text">Hi there, have a question? Text us here.</div>
+            <button class="chat-close" aria-label="Close chat" onclick="this.parentElement.style.display='none'">&times;</button>
+        </div>
+        <button class="chat-button" aria-label="Open chat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </button>
+    </div>
 
     <script src="script.js"></script>
 </body>
