@@ -199,7 +199,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 
 /* ===== ABOUT ===== */
 .about { padding: 120px 0; position: relative; overflow: hidden; }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 .about-lead { font-family: var(--font-display); font-size: 1.5rem; line-height: 1.5; margin-bottom: 24px; color: var(--charcoal); }
 .about-lead em { font-family: var(--font-accent); color: var(--pink); }
 .about-visual-list { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
