@@ -524,6 +524,30 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
+    .logo-link {
+        width: 80px;
+        height: 80px;
+        margin-top: -20px;
+        margin-bottom: -20px;
+        border-width: 4px;
+        box-shadow: 4px 4px 0px rgba(44, 44, 44, 1);
+    }
+    .logo-img {
+        width: 54px;
+        height: 54px;
+    }
+    .site-header.scrolled .logo-link {
+        width: 58px;
+        height: 58px;
+        margin-top: -8px;
+        margin-bottom: -8px;
+        border-width: 3px;
+    }
+    .site-header.scrolled .logo-img {
+        width: 38px;
+        height: 38px;
+    }
+
     .hero-grid--landing { grid-template-columns: 1fr; gap: 48px; }
     .hero-title--landing { font-size: 3.5rem; }
     .hero-form-container { max-width: 600px; margin: 0 auto; }
