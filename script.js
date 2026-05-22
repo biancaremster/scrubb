@@ -1,4 +1,24 @@
+// ===== Dynamic hero padding: always clears the header (including logo bleed) =====
+function setHeroPadding() {
+    const header = document.getElementById('site-header');
+    const hero   = document.querySelector('.hero--landing');
+    if (!header || !hero) return;
+
+    // getBoundingClientRect().bottom gives the actual rendered bottom edge,
+    // including any logo that overflows below the navbar container.
+    const headerBottom = header.getBoundingClientRect().bottom;
+    const pad = Math.ceil(headerBottom) + 24; // 24px breathing room
+    document.documentElement.style.setProperty('--hero-top-pad', pad + 'px');
+}
+
+// Run immediately and on every resize
+setHeroPadding();
+window.addEventListener('resize', setHeroPadding, { passive: true });
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Re-run after fonts/images load (logo may shift layout)
+    setHeroPadding();
+    window.addEventListener('load', setHeroPadding);
     // ===== Intersection Observer for scroll animations =====
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

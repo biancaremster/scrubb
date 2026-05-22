@@ -188,7 +188,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 /* ===== HERO LANDING PAGE ===== */
 .hero--landing {
     position: relative; min-height: 80vh; display: flex; align-items: center;
-    padding: 180px 0 20px; overflow: hidden;
+    padding: var(--hero-top-pad, 180px) 0 20px; overflow: hidden;
     color: var(--charcoal);
     background-color: var(--blue-pale);
     border-bottom: 2px solid var(--charcoal);
@@ -626,8 +626,8 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     .nav-list, .header-cta { display: none; }
     .mobile-toggle { display: flex; }
 
-    /* Push hero content below the full header height (navbar ~64px + safe buffer) */
-    .hero--landing { padding: 100px 0 60px; min-height: auto; }
+    /* Push hero content below the full header height (set dynamically by JS) */
+    .hero--landing { padding-top: var(--hero-top-pad, 110px); min-height: auto; }
     .hero-title--landing { font-size: 2.8rem; }
     .hero-features-grid { grid-template-columns: 1fr; }
     
