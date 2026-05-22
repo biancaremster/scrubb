@@ -61,19 +61,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contact-form');
     const submitBtn = document.getElementById('contact-submit');
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sent! We\'ll be in touch ✓';
-        submitBtn.style.background = '#8fa4c4';
-        submitBtn.disabled = true;
-        setTimeout(() => {
-            submitBtn.textContent = originalText;
-            submitBtn.style.background = '';
-            submitBtn.disabled = false;
-            form.reset();
-        }, 3000);
-    });
+    if (form && submitBtn) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sent! We\'ll be in touch ✓';
+            submitBtn.style.background = '#8fa4c4';
+            submitBtn.disabled = true;
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+                form.reset();
+            }, 3000);
+        });
+    }
 
     // ===== Subtle parallax on hero decorations =====
     const heroCircle = document.querySelector('.hero-decoration--circle');

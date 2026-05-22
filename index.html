@@ -364,43 +364,14 @@
             <div class="contact-decoration contact-decoration--left" aria-hidden="true"></div>
             <div class="contact-decoration contact-decoration--right" aria-hidden="true"></div>
             <div class="container">
-                <div class="contact-inner anim-fade-up">
-                    <div class="contact-text">
-                        <h2 class="contact-title">Ready to Make<br>Your Space <em>Shine</em>?</h2>
-                        <p class="contact-body">Get a free, no-obligation quote today. We'll respond within 2 hours during business hours (Mon-Fri, 8am to 7pm).</p>
+                <div class="contact-inner contact-inner--embed anim-fade-up">
+                    <div class="contact-header">
+                        <h2 class="contact-title">Book a <em>Clean</em></h2>
+                        <p class="contact-body">Select your service, choose a date and time, and instantly secure your booking below.</p>
                     </div>
-                    <form id="contact-form" class="contact-form" onsubmit="return false;">
-                        <div class="form-group">
-                            <label for="contact-name" class="form-label">Your Name</label>
-                            <input type="text" id="contact-name" class="form-input" placeholder="Jane Doe" required>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="contact-email" class="form-label">Email</label>
-                                <input type="email" id="contact-email" class="form-input" placeholder="hello@example.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="contact-phone" class="form-label">Phone</label>
-                                <input type="tel" id="contact-phone" class="form-input" placeholder="(555) 000-0000">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-service" class="form-label">Service Needed</label>
-                            <select id="contact-service" class="form-input form-select">
-                                <option value="" disabled selected>Choose a service...</option>
-                                <option value="standard">Standard Clean</option>
-                                <option value="deep">Signature Deep Clean</option>
-                                <option value="move">Move In / Move Out</option>
-                                <option value="organize">Decluttering / Organization</option>
-                                <option value="other">Something Else</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-message" class="form-label">Tell Us About Your Space</label>
-                            <textarea id="contact-message" class="form-input form-textarea" rows="4" placeholder="Approximate square footage, number of rooms, special requests..."></textarea>
-                        </div>
-                        <button type="submit" id="contact-submit" class="btn btn--primary btn--full">Send Request →</button>
-                    </form>
+                    <div class="booking-widget-container">
+                        <!-- Start Square Appointments Embed Code --><script src='https://square.site/appointments/buyer/widget/2ekqs847hxf9c3/L7DS11G9N3GJ8.js'></script><!-- End Square Appointments Embed Code -->
+                    </div>
                 </div>
             </div>
         </section>
