@@ -29,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="stylesheet" href="styles.css?v=1.2">
 </head>
 <body>
     <div class="grain-overlay" aria-hidden="true"></div>
@@ -119,7 +119,13 @@
                                     <input type="text" id="referrer-name" class="ref-form-input" placeholder="Enter your name..." value="">
                                 </div>
                                 <div class="ref-form-group">
-                                    <div class="ref-form-label">Message Preview</div>
+                                    <div class="ref-form-label">
+                                        <span>Message Preview</span>
+                                        <div class="live-indicator">
+                                            <span class="live-dot"></span>
+                                            Live Preview
+                                        </div>
+                                    </div>
                                     <textarea id="share-preview-text" class="ref-form-textarea" rows="5" readonly>Hey! I highly recommend Scrubb ATX for cleaning services in Austin. They're eco-friendly, fully insured, and they guarantee their work. If you book their Signature Deep Clean, mention my name so I can earn a referral reward, and you can get a sparkling clean space!</textarea>
                                 </div>
                                 <button id="copy-message-btn" class="btn btn--primary btn--full ref-copy-button">
