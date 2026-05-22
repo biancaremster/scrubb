@@ -3,22 +3,21 @@
 /* Area Hero */
 .area-hero {
     padding: 160px 0 60px;
-    background: var(--charcoal);
-    color: var(--cream);
+    background: var(--blue-pale);
+    color: var(--charcoal);
     position: relative; overflow: hidden;
-    background-image: url("data:image/svg+xml,%3Csvg width='240' height='240' viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.08'%3E%3Cpolygon points='40,20 60,60 20,60' fill='%23c9a0aa' /%3E%3Ccircle cx='180' cy='50' r='25' fill='%238fa4c4' /%3E%3Crect x='80' y='140' width='30' height='30' transform='rotate(45 95 155)' fill='%23e8d2d8' /%3E%3Cpolygon points='190,170 220,210 160,210' fill='none' stroke='%23c5d1e4' stroke-width='4' /%3E%3Ccircle cx='30' cy='180' r='10' fill='%23c9a0aa' /%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: repeat;
+    border-bottom: 2px solid var(--charcoal);
 }
 
 .area-breadcrumb {
-    font-size: 0.85rem; margin-bottom: 28px; color: rgba(255,255,255,0.5);
+    font-size: 0.85rem; margin-bottom: 28px; color: var(--slate);
 }
 .area-breadcrumb a {
-    color: rgba(255,255,255,0.5); transition: color 0.3s;
+    color: var(--slate); transition: color 0.3s;
 }
-.area-breadcrumb a:hover { color: var(--pink-light); }
+.area-breadcrumb a:hover { color: var(--pink); }
 .breadcrumb-sep { margin: 0 8px; opacity: 0.5; }
-.breadcrumb-current { color: var(--cream); font-weight: 500; }
+.breadcrumb-current { color: var(--charcoal); font-weight: 500; }
 
 .area-hero-title {
     font-family: var(--font-display); font-size: 3.8rem; line-height: 1.1;
@@ -28,11 +27,11 @@
     font-family: var(--font-accent); font-style: italic; color: var(--pink);
 }
 .area-hero-zip {
-    font-size: 1rem; font-weight: 600; color: var(--pink-light);
+    font-size: 1rem; font-weight: 600; color: var(--pink);
     letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px;
 }
 .area-hero-body {
-    font-size: 1.15rem; color: rgba(255,255,255,0.8);
+    font-size: 1.15rem; color: var(--slate);
     max-width: 620px; line-height: 1.7; margin-bottom: 32px;
 }
 
