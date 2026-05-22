@@ -539,6 +539,21 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 }
 
 @media (max-width: 768px) {
+    .site-header { padding: 16px 0; }
+    .site-header.scrolled { padding: 8px 0; }
+    .logo-link {
+        width: 80px;
+        height: 80px;
+        margin-top: -16px;
+        margin-bottom: -16px;
+        border-width: 4px;
+        box-shadow: 4px 4px 0px rgba(44, 44, 44, 1);
+    }
+    .logo-img {
+        width: 52px;
+        height: 52px;
+    }
+
     .nav-list, .header-cta { display: none; }
     .mobile-toggle { display: flex; }
     .hero--landing { padding: 120px 0 60px; min-height: auto; }
