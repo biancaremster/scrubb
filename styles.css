@@ -645,3 +645,230 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     .chat-button { width: 50px; height: 50px; }
     .chat-button svg { width: 24px; height: 24px; }
 }
+
+/* ===== REFERRAL PAGE ===== */
+.referral-hero {
+    position: relative;
+    padding: 160px 0 80px;
+    background: linear-gradient(135deg, var(--blue-pale) 0%, var(--pink-pale) 100%);
+    color: var(--charcoal);
+    text-align: center;
+    border-bottom: 2px solid var(--charcoal);
+    overflow: hidden;
+}
+.referral-hero .container {
+    position: relative;
+    z-index: 1;
+}
+.referral-steps-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+.referral-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+}
+.referral-step-card {
+    background: var(--warm-white);
+    padding: 40px 32px;
+    border: 2px solid var(--charcoal);
+    border-radius: 4px;
+    box-shadow: 6px 6px 0px rgba(44, 44, 44, 1);
+    transition: all 0.4s var(--ease);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.referral-step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 8px 8px 0px var(--pink);
+    border-color: var(--charcoal);
+}
+.referral-step-card--highlight {
+    background: linear-gradient(180deg, var(--pink-pale), var(--warm-white));
+}
+.referral-step-card--highlight:hover {
+    box-shadow: 8px 8px 0px var(--blue);
+}
+.referral-step-badge {
+    position: absolute;
+    top: -18px;
+    background: var(--charcoal);
+    color: var(--cream);
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    padding: 4px 16px;
+    border-radius: 20px;
+    border: 2px solid var(--charcoal);
+    box-shadow: 3px 3px 0px var(--pink);
+    font-weight: 600;
+}
+.referral-step-card--highlight .referral-step-badge {
+    box-shadow: 3px 3px 0px var(--blue);
+}
+.referral-step-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--blue-pale);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 24px;
+    border: 2px solid var(--charcoal);
+    box-shadow: 3px 3px 0px rgba(44,44,44,1);
+    transition: all 0.3s var(--ease);
+    font-size: 1.8rem;
+}
+.referral-step-card:hover .referral-step-icon {
+    transform: scale(1.1) rotate(-8deg);
+    background: var(--warm-white);
+    color: var(--pink);
+}
+.referral-step-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--charcoal);
+}
+.referral-step-desc {
+    font-size: 0.95rem;
+    color: var(--slate);
+    line-height: 1.6;
+}
+
+/* Share / Message Generator Section */
+.referral-share-section {
+    padding: 60px 0 100px;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+}
+.share-generator-card {
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--warm-white);
+    padding: 48px;
+    border-radius: 4px;
+    border: 2px solid var(--charcoal);
+    box-shadow: 8px 8px 0px rgba(44, 44, 44, 1);
+    position: relative;
+    z-index: 1;
+}
+.share-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+    text-align: center;
+}
+.share-subtitle {
+    font-size: 0.95rem;
+    color: var(--slate);
+    margin-bottom: 30px;
+    text-align: center;
+}
+.share-input-group {
+    margin-bottom: 24px;
+}
+.share-input-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--slate);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.share-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid var(--charcoal);
+    border-radius: 4px;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-size: 1rem;
+    transition: all 0.3s var(--ease);
+}
+.share-input:focus {
+    outline: none;
+    border-color: var(--pink);
+    background: var(--warm-white);
+    box-shadow: 0 0 0 4px rgba(247, 161, 192, 0.2);
+}
+.share-preview-box {
+    position: relative;
+    background: var(--pink-pale);
+    border: 1px dashed var(--charcoal);
+    border-radius: 4px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.share-preview-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--pink);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+}
+.share-preview-text {
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    line-height: 1.6;
+    white-space: pre-line;
+    border: none;
+    background: transparent;
+    width: 100%;
+    resize: none;
+    font-family: inherit;
+}
+.share-preview-text:focus {
+    outline: none;
+}
+.share-action-btn {
+    width: 100%;
+    background: var(--conversion);
+    color: var(--warm-white);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 16px;
+    border: 1px solid var(--charcoal);
+    border-radius: 4px;
+    box-shadow: 4px 4px 0px rgba(44, 44, 44, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s var(--ease);
+}
+.share-action-btn:hover {
+    background: var(--conversion-hover);
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px rgba(44, 44, 44, 1);
+}
+.share-action-btn:active {
+    transform: translateY(1px);
+    box-shadow: 2px 2px 0px rgba(44, 44, 44, 1);
+}
+
+@media (max-width: 900px) {
+    .referral-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .share-generator-card {
+        padding: 30px 20px;
+    }
+}
+
