@@ -69,65 +69,68 @@
     </div>
 
     <main>
-        <!-- Single-Screen Referral Section -->
-        <section class="referral-page">
-            <div class="bg-decoration bg-decoration--circle" style="top: -80px; right: -80px; width: 400px; height: 400px; background: var(--pink); opacity: 0.12; filter: blur(60px);" aria-hidden="true"></div>
-            <div class="bg-decoration bg-decoration--circle" style="bottom: -60px; left: -60px; width: 300px; height: 300px; background: var(--blue); opacity: 0.1; filter: blur(50px);" aria-hidden="true"></div>
+        <section class="referral-hero-layout">
+            <div class="bg-decoration bg-decoration--circle" style="top: -150px; right: -100px; width: 600px; height: 600px; background: var(--pink); opacity: 0.15; filter: blur(80px);" aria-hidden="true"></div>
+            <div class="bg-decoration bg-decoration--circle-blue" style="bottom: -150px; left: -100px; width: 500px; height: 500px; background: var(--blue); opacity: 0.15; filter: blur(70px);" aria-hidden="true"></div>
+            
             <div class="container">
+                <div class="referral-grid">
+                    
+                    <!-- Left Column: Content & Steps -->
+                    <div class="referral-content anim-fade-up">
+                        <div class="promo-pill">🎁 Referral Program</div>
+                        <h1 class="referral-title">Earn <span class="referral-title-accent">$50</span> Cash</h1>
+                        <p class="referral-body">Refer anyone in Austin to book a Signature Deep Clean with us — and we'll send you <strong>$50 cash</strong>. Open to everyone, not just current clients.</p>
+                        
+                        <div class="referral-steps-vertical">
+                            <div class="ref-step-item">
+                                <div class="ref-step-marker">1</div>
+                                <div class="ref-step-text">
+                                    <h3>Tell a Friend</h3>
+                                    <p>Recommend Scrubb ATX to a friend, neighbor, or family member.</p>
+                                </div>
+                            </div>
+                            <div class="ref-step-item">
+                                <div class="ref-step-marker">2</div>
+                                <div class="ref-step-text">
+                                    <h3>They Book</h3>
+                                    <p>They mention your name when booking their first Signature Deep Clean.</p>
+                                </div>
+                            </div>
+                            <div class="ref-step-item">
+                                <div class="ref-step-marker">3</div>
+                                <div class="ref-step-text">
+                                    <h3>Get $50</h3>
+                                    <p>Collect your $50 cash reward. It's that simple.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Hero: Value Proposition -->
-                <div class="ref-header anim-fade-up">
-                    <div class="ref-pill">🎁 Referral Program</div>
-                    <h1 class="ref-headline">Earn <span class="ref-amount">$50</span> Cash</h1>
-                    <p class="ref-subtext">Refer anyone in Austin to book a Signature Deep Clean with us — and we'll send you <strong>$50 cash</strong>. Open to everyone, not just current clients.</p>
+                    <!-- Right Column: Share Card -->
+                    <div class="referral-card-wrapper anim-fade-in-right" style="--delay: 0.1s;">
+                        <div class="referral-card">
+                            <h2 class="referral-card-title">Share It Now</h2>
+                            <p class="referral-card-desc">Enter your name to generate a custom message you can send to your friends.</p>
+                            
+                            <div class="referral-form">
+                                <div class="ref-form-group">
+                                    <label for="referrer-name" class="ref-form-label">Your Name</label>
+                                    <input type="text" id="referrer-name" class="ref-form-input" placeholder="Enter your name..." value="">
+                                </div>
+                                <div class="ref-form-group">
+                                    <div class="ref-form-label">Message Preview</div>
+                                    <textarea id="share-preview-text" class="ref-form-textarea" rows="5" readonly>Hey! I highly recommend Scrubb ATX for cleaning services in Austin. They're eco-friendly, fully insured, and they guarantee their work. If you book their Signature Deep Clean, mention my name so I can earn a referral reward, and you can get a sparkling clean space!</textarea>
+                                </div>
+                                <button id="copy-message-btn" class="btn btn--primary btn--full ref-copy-button">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    Copy Message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-                <!-- How It Works: Compact Steps -->
-                <div class="ref-steps anim-fade-up" style="--delay: 0.1s;">
-                    <div class="ref-step">
-                        <span class="ref-step-num">1</span>
-                        <div class="ref-step-content">
-                            <h2 class="ref-step-title">Tell a Friend</h2>
-                            <p>Recommend Scrubb ATX to a friend, neighbor, or family member.</p>
-                        </div>
-                    </div>
-                    <div class="ref-step-arrow" aria-hidden="true">→</div>
-                    <div class="ref-step">
-                        <span class="ref-step-num">2</span>
-                        <div class="ref-step-content">
-                            <h2 class="ref-step-title">They Book</h2>
-                            <p>They mention your name when booking their first Signature Deep Clean.</p>
-                        </div>
-                    </div>
-                    <div class="ref-step-arrow" aria-hidden="true">→</div>
-                    <div class="ref-step">
-                        <span class="ref-step-num">3</span>
-                        <div class="ref-step-content">
-                            <h2 class="ref-step-title">Get $50</h2>
-                            <p>Collect your $50 cash reward. It's that simple.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Share Tool: Inline -->
-                <div class="ref-share anim-fade-up" style="--delay: 0.2s;">
-                    <h2 class="ref-share-heading">Share It Now</h2>
-                    <div class="ref-share-row">
-                        <div class="ref-share-input-wrap">
-                            <label for="referrer-name" class="ref-share-label">Your Name</label>
-                            <input type="text" id="referrer-name" class="ref-share-input" placeholder="Enter your name..." value="">
-                        </div>
-                        <div class="ref-share-preview-wrap">
-                            <div class="ref-share-preview-label">Message Preview</div>
-                            <textarea id="share-preview-text" class="ref-share-preview" rows="4" readonly>Hey! I highly recommend Scrubb ATX for cleaning services in Austin. They're eco-friendly, fully insured, and they guarantee their work. If you book their Signature Deep Clean, mention my name so I can earn a referral reward, and you can get a sparkling clean space!</textarea>
-                        </div>
-                    </div>
-                    <button id="copy-message-btn" class="ref-copy-btn">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                        Copy Message
-                    </button>
-                </div>
-
             </div>
         </section>
     </main>
@@ -221,13 +224,15 @@
                     await navigator.clipboard.writeText(previewText.value);
                     const originalText = copyBtn.innerHTML;
                     copyBtn.innerHTML = `
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Copied Message!
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Copied!
                     `;
-                    copyBtn.style.background = '#8fa4c4';
+                    copyBtn.style.background = '#8aa5cd';
+                    copyBtn.style.color = '#faf9f6';
                     setTimeout(() => {
                         copyBtn.innerHTML = originalText;
                         copyBtn.style.background = '';
+                        copyBtn.style.color = '';
                     }, 2500);
                 } catch (err) {
                     console.error('Failed to copy text: ', err);
