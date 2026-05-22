@@ -593,37 +593,41 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 }
 
 @media (max-width: 768px) {
-    .site-header { padding: 10px 0; }
+    .site-header { padding: 8px 0; }
     .site-header.scrolled { padding: 4px 0; }
-    .site-header .container { padding: 6px 12px; }
+    .site-header .container { padding: 8px 16px; }
+
+    /* Flatten the logo so it sits entirely inside the navbar — no bleed */
     .logo-link {
-        width: 44px;
-        height: 44px;
+        width: 48px;
+        height: 48px;
         margin-top: 0;
         margin-bottom: 0;
         border-width: 2px;
         box-shadow: 2px 2px 0px rgba(44, 44, 44, 1);
     }
     .logo-img {
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
     }
     .site-header.scrolled .logo-link {
-        width: 36px;
-        height: 36px;
+        width: 40px;
+        height: 40px;
         margin-top: 0;
         margin-bottom: 0;
         border-width: 2px;
         box-shadow: 2px 2px 0px rgba(44, 44, 44, 1);
     }
     .site-header.scrolled .logo-img {
-        width: 22px;
-        height: 22px;
+        width: 24px;
+        height: 24px;
     }
 
     .nav-list, .header-cta { display: none; }
     .mobile-toggle { display: flex; }
-    .hero--landing { padding: 120px 0 60px; min-height: auto; }
+
+    /* Push hero content below the full header height (navbar ~64px + safe buffer) */
+    .hero--landing { padding: 100px 0 60px; min-height: auto; }
     .hero-title--landing { font-size: 2.8rem; }
     .hero-features-grid { grid-template-columns: 1fr; }
     
