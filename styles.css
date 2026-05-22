@@ -597,28 +597,28 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     .site-header.scrolled { padding: 4px 0; }
     .site-header .container { padding: 6px 12px; }
     .logo-link {
-        width: 54px;
-        height: 54px;
-        margin-top: -8px;
-        margin-bottom: -8px;
-        border-width: 3px;
-        box-shadow: 3px 3px 0px rgba(44, 44, 44, 1);
-    }
-    .logo-img {
-        width: 34px;
-        height: 34px;
-    }
-    .site-header.scrolled .logo-link {
         width: 44px;
         height: 44px;
-        margin-top: -5px;
-        margin-bottom: -5px;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-width: 2px;
+        box-shadow: 2px 2px 0px rgba(44, 44, 44, 1);
+    }
+    .logo-img {
+        width: 28px;
+        height: 28px;
+    }
+    .site-header.scrolled .logo-link {
+        width: 36px;
+        height: 36px;
+        margin-top: 0;
+        margin-bottom: 0;
         border-width: 2px;
         box-shadow: 2px 2px 0px rgba(44, 44, 44, 1);
     }
     .site-header.scrolled .logo-img {
-        width: 28px;
-        height: 28px;
+        width: 22px;
+        height: 22px;
     }
 
     .nav-list, .header-cta { display: none; }
