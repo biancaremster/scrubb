@@ -20,7 +20,7 @@
 .breadcrumb-current { color: var(--charcoal); font-weight: 500; }
 
 .area-hero-title {
-    font-family: var(--font-display); font-size: 3.8rem; line-height: 1.1;
+    font-family: var(--font-display); font-size: clamp(2rem, 5vw + 1.2rem, 3.8rem); line-height: 1.1;
     letter-spacing: -0.02em; margin-bottom: 12px; max-width: 700px;
 }
 .area-hero-title em {
@@ -80,7 +80,7 @@
 }
 .area-cta-inner { text-align: center; max-width: 640px; margin: 0 auto; }
 .area-cta-title {
-    font-family: var(--font-display); font-size: 3rem; line-height: 1.15; margin-bottom: 16px;
+    font-family: var(--font-display); font-size: clamp(1.8rem, 4vw + 0.8rem, 3rem); line-height: 1.15; margin-bottom: 16px;
 }
 .area-cta-title em { font-family: var(--font-accent); color: var(--pink-light); }
 .area-cta-body {
@@ -157,18 +157,14 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .area-why-grid { grid-template-columns: 1fr 1fr; }
-    .area-hero-title { font-size: 3rem; }
 }
 
 @media (max-width: 768px) {
     .area-hero { padding: 130px 0 48px; }
-    .area-hero-title { font-size: 2.5rem; }
     .area-why-grid { grid-template-columns: 1fr; }
-    .area-cta-title { font-size: 2.2rem; }
     .services-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-    .area-hero-title { font-size: 2rem; }
-    .area-cta-title { font-size: 1.8rem; }
+    .area-cta-actions { flex-direction: column; }
 }

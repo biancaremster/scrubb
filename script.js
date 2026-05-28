@@ -144,9 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     chatClose.addEventListener('click', () => closeChat());
 
-    // Auto-show the popup once after 4 seconds
+    // Auto-show the popup once after 4 seconds (only on desktop/tablets > 768px)
     setTimeout(() => {
-        if (!autoShownOnce && !chatOpen) {
+        if (window.innerWidth > 768 && !autoShownOnce && !chatOpen) {
             autoShownOnce = true;
             openChat();
             // Auto-dismiss after 8 more seconds if the user ignores it

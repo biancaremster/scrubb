@@ -27,13 +27,13 @@
     <style>
         .page-hero { 
             position: relative; overflow: hidden;
-            padding: 110px 0 40px; 
+            padding: clamp(110px, 15vw, 160px) 0 40px; 
             background: linear-gradient(135deg, var(--blue-pale) 0%, var(--pink-pale) 100%); 
             color: var(--charcoal); 
             text-align: center; border-bottom: 2px solid var(--charcoal); 
         }
         .page-hero .container { position: relative; z-index: 1; }
-        .page-title { font-family: var(--font-display); font-size: 3rem; margin-bottom: 12px; }
+        .page-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw + 1rem, 3rem); margin-bottom: 12px; }
         .page-subtitle { font-size: 1.1rem; color: var(--slate); max-width: 600px; margin: 0 auto; }
         .services-section { padding: 40px 0; }
         
@@ -63,8 +63,8 @@
         }
 
         .services-cta { padding: 60px 0 100px; }
-        .services-cta-inner { background: var(--pink-light); padding: 60px 40px; border: 2px solid var(--charcoal); box-shadow: 8px 8px 0px rgba(44,44,44,1); border-radius: 4px; text-align: center; }
-        .services-cta-title { font-family: var(--font-display); font-size: 3rem; color: var(--charcoal); margin-bottom: 16px; line-height: 1.1; }
+        .services-cta-inner { background: var(--pink-light); padding: clamp(30px, 8vw, 60px) clamp(20px, 5vw, 40px); border: 2px solid var(--charcoal); box-shadow: 8px 8px 0px rgba(44,44,44,1); border-radius: 4px; text-align: center; }
+        .services-cta-title { font-family: var(--font-display); font-size: clamp(1.8rem, 5vw + 1rem, 3rem); color: var(--charcoal); margin-bottom: 16px; line-height: 1.1; }
         .services-cta-title em { font-family: var(--font-accent); color: var(--pink); font-style: italic; }
         .services-cta-body { font-size: 1.1rem; color: var(--charcoal); margin-bottom: 30px; font-weight: 500; }
         .services-cta-actions { display: flex; justify-content: center; gap: 20px; }
@@ -95,8 +95,25 @@
                 </ul>
             </nav>
             <a href="index.html#contact" id="header-cta" class="header-cta">Book a Clean</a>
+            <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobile-nav" class="mobile-nav">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html#about" class="mobile-nav-link">About</a></li>
+            <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li><a href="index.html#service-areas" class="mobile-nav-link">Areas</a></li>
+            <li><a href="referral.html" class="mobile-nav-link">Referrals</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-link cta">Book a Clean</a></li>
+        </ul>
+    </div>
 
     <main>
         <section class="page-hero">

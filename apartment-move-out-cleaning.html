@@ -25,8 +25,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     <style>
-        .page-hero { padding: 100px 0 30px; background: var(--blue-pale); color: var(--charcoal); text-align: center; border-bottom: 2px solid var(--charcoal); }
-        .page-title { font-family: var(--font-display); font-size: 3rem; margin-bottom: 12px; }
+        .page-hero { padding: clamp(100px, 15vw, 140px) 0 clamp(30px, 6vw, 50px); background: var(--blue-pale); color: var(--charcoal); text-align: center; border-bottom: 2px solid var(--charcoal); }
+        .page-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw + 1rem, 3rem); margin-bottom: 12px; }
         .page-subtitle { font-size: 1.1rem; color: var(--slate); max-width: 600px; margin: 0 auto; }
         .services-section { padding: 40px 0; }
         
@@ -56,8 +56,8 @@
         }
 
         .services-cta { padding: 60px 0 100px; }
-        .services-cta-inner { background: var(--pink-light); padding: 60px 40px; border: 2px solid var(--charcoal); box-shadow: 8px 8px 0px rgba(44,44,44,1); border-radius: 4px; text-align: center; }
-        .services-cta-title { font-family: var(--font-display); font-size: 3rem; color: var(--charcoal); margin-bottom: 16px; line-height: 1.1; }
+        .services-cta-inner { background: var(--pink-light); padding: clamp(30px, 8vw, 60px) clamp(20px, 5vw, 40px); border: 2px solid var(--charcoal); box-shadow: 8px 8px 0px rgba(44,44,44,1); border-radius: 4px; text-align: center; }
+        .services-cta-title { font-family: var(--font-display); font-size: clamp(1.8rem, 5vw + 1rem, 3rem); color: var(--charcoal); margin-bottom: 16px; line-height: 1.1; }
         .services-cta-title em { font-family: var(--font-accent); color: var(--pink); font-style: italic; }
         .services-cta-body { font-size: 1.1rem; color: var(--charcoal); margin-bottom: 30px; font-weight: 500; }
         .services-cta-actions { display: flex; justify-content: center; gap: 20px; }
@@ -94,8 +94,25 @@
                 </ul>
             </nav>
             <a href="index.html#contact" id="header-cta" class="header-cta">Book a Clean</a>
+            <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobile-nav" class="mobile-nav">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html#about" class="mobile-nav-link">About</a></li>
+            <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li><a href="index.html#service-areas" class="mobile-nav-link">Areas</a></li>
+            <li><a href="referral.html" class="mobile-nav-link">Referrals</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-link cta">Book a Clean</a></li>
+        </ul>
+    </div>
 
     <main>
         <section class="page-hero">
@@ -112,8 +129,8 @@
 
         <section class="services-section">
             <div class="container">
-                <div style="text-align: center; max-width: 800px; margin: 0 auto 60px;">
-                    <h2 style="font-family: var(--font-display); font-size: 2.5rem; color: var(--charcoal); margin-bottom: 20px;">The Ultimate Move-Out Checklist</h2>
+                <div style="text-align: center; max-width: 800px; margin: 0 auto 60px; padding: 0 16px;">
+                    <h2 style="font-family: var(--font-display); font-size: clamp(1.8rem, 4vw + 0.8rem, 2.5rem); color: var(--charcoal); margin-bottom: 20px; line-height: 1.2;">The Ultimate Move-Out Checklist</h2>
                     <p style="color: var(--slate); font-size: 1.1rem; line-height: 1.6;">Our comprehensive apartment move-out cleaning covers every detail property managers look for during final inspections. We clean top to bottom, ensuring nothing is missed.</p>
                 </div>
                 
