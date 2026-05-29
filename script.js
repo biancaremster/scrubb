@@ -97,16 +97,53 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== Quote lead form submission =====
+    // ===== Quote lead form submission (Web3Forms AJAX integration) =====
     const leadForm = document.getElementById('hero-lead-form');
     if (leadForm) {
         leadForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Create a gorgeous notification toast
-            showToast("We will message you back with an estimate or quote promptly!");
+            const submitBtn = leadForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
             
-            leadForm.reset();
+            // Set loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            const formData = new FormData(leadForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                const result = await response.json();
+                if (response.status === 200 && result.success) {
+                    // Success toast
+                    showToast("Estimate requested! We will message you back with a quote promptly.");
+                    leadForm.reset();
+                } else {
+                    // API error response
+                    console.error("Web3Forms Error:", result);
+                    showToast(result.message || "Something went wrong. Please try again or contact us directly.");
+                }
+            })
+            .catch(error => {
+                // Network/fetch error
+                console.error("Submission error:", error);
+                showToast("Network error. Please check your connection and try again.");
+            })
+            .finally(() => {
+                // Restore button state
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
 

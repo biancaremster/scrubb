@@ -116,30 +116,35 @@
                 <div class="hero-form-container anim-fade-in-right">
                     <div class="hero-form-card">
                         <h2 class="form-card-title">Get a Free Estimate Today</h2>
-                        <form id="hero-lead-form" class="lead-form" onsubmit="return false;">
+                        <form id="hero-lead-form" class="lead-form">
+                            <input type="hidden" name="access_key" value="f5935a1d-3bc0-469e-ae6e-4fb5f7159887">
+                            <input type="hidden" name="subject" value="New Cleaning Estimate Lead - Scrubb ATX">
+                            <input type="hidden" name="from_name" value="Scrubb ATX Website">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                            
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="lead-first-name" class="lead-label">First Name <span class="required">*</span></label>
-                                    <input type="text" id="lead-first-name" class="lead-input" placeholder="First Name" required>
+                                    <input type="text" id="lead-first-name" name="first_name" class="lead-input" placeholder="First Name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="lead-last-name" class="lead-label">Last Name <span class="required">*</span></label>
-                                    <input type="text" id="lead-last-name" class="lead-input" placeholder="Last Name" required>
+                                    <input type="text" id="lead-last-name" name="last_name" class="lead-input" placeholder="Last Name" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="lead-phone" class="lead-label">Phone Number <span class="required">*</span></label>
-                                    <input type="tel" id="lead-phone" class="lead-input" placeholder="Phone Number" required>
+                                    <input type="tel" id="lead-phone" name="phone" class="lead-input" placeholder="Phone Number" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="lead-email" class="lead-label">Email</label>
-                                    <input type="email" id="lead-email" class="lead-input" placeholder="Email Address">
+                                    <input type="email" id="lead-email" name="email" class="lead-input" placeholder="Email Address">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="lead-message" class="lead-label">Details about your cleaning</label>
-                                <textarea id="lead-message" class="lead-input lead-textarea" rows="4" placeholder="Message"></textarea>
+                                <textarea id="lead-message" name="message" class="lead-input lead-textarea" rows="4" placeholder="Message"></textarea>
                             </div>
                             <button type="submit" class="btn btn--primary btn--full btn--submit">Get My Free Quote</button>
                         </form>
