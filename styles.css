@@ -1112,5 +1112,105 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     }
 }
 
+/* ===== LOW-FRICTION REFERRAL SHARING (Option A) ===== */
+.referral-share-card {
+    display: flex;
+    flex-direction: column;
+}
+.share-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.primary-share-button {
+    margin-top: 0 !important;
+    width: 100%;
+}
+.share-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--mist);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.share-divider::before,
+.share-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid var(--blue-light);
+}
+.share-divider::before {
+    margin-right: 12px;
+}
+.share-divider::after {
+    margin-left: 12px;
+}
+.share-channels-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+.share-channel-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 10px;
+    background: var(--warm-white);
+    border: 2.5px solid var(--charcoal);
+    border-radius: 4px;
+    color: var(--charcoal);
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: all 0.3s var(--ease);
+    text-align: center;
+    box-shadow: 4px 4px 0px var(--charcoal);
+}
+.share-channel-btn svg {
+    transition: transform 0.3s var(--ease);
+}
+.share-channel-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px var(--charcoal);
+}
+.share-channel-btn:hover svg {
+    transform: scale(1.15);
+}
+.share-channel-btn:active {
+    transform: translateY(1px);
+    box-shadow: 2px 2px 0px var(--charcoal);
+}
+
+/* Color-specific hover effects for premium feel */
+.sms-btn:hover {
+    background: var(--blue-pale);
+    border-color: var(--blue);
+}
+.whatsapp-btn:hover {
+    background: #e6f7ed;
+    border-color: #25d366;
+    color: #128c7e;
+}
+.email-btn:hover {
+    background: var(--pink-pale);
+    border-color: var(--pink);
+}
+.copy-btn:hover {
+    background: var(--blue-pale);
+    border-color: var(--navy);
+}
+
+@media (max-width: 480px) {
+    .share-channels-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+
 
 

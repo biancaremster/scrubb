@@ -108,28 +108,42 @@
 
                     <!-- Right Column: Share Card & Submit Form -->
                     <div class="referral-card-wrapper anim-fade-in-right" style="--delay: 0.1s;">
-                        <!-- Card 1: Share message -->
-                        <div class="referral-card">
-                            <h2 class="referral-card-title">Share It Now</h2>
-                            <p class="referral-card-desc">Enter your name to generate a custom message you can send to your friends.</p>
+                        <!-- Card 1: Share with Friends -->
+                        <div class="referral-card referral-share-card">
+                            <h2 class="referral-card-title">Share with Friends</h2>
+                            <p class="referral-card-desc">Share our Signature Deep Clean with friends and earn $50 cash when they book! Choose a quick method below.</p>
                             
-                            <div class="referral-form">
-                                <div class="ref-form-group">
-                                    <label for="referrer-name" class="ref-form-label">Your Name</label>
-                                    <input type="text" id="referrer-name" class="ref-form-input" placeholder="Enter your name..." value="">
-                                </div>
-                                <div class="ref-form-group">
-                                    <div class="ref-form-label">
-                                        <span>Message Preview</span>
-                                    </div>
-                                    <textarea id="share-preview-text" class="ref-form-textarea" rows="5" readonly>Hey! I highly recommend Scrubb ATX for cleaning services in Austin. They're eco-friendly, fully insured, and they guarantee their work. If you book and complete a Signature Deep Clean, mention my name so I can earn a referral reward, and you can get a sparkling clean space!</textarea>
-                                </div>
-                                <button id="copy-message-btn" class="btn btn--primary btn--full ref-copy-button">
-                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                                    Copy Message
+                            <div class="share-actions">
+                                <button id="primary-share-btn" class="btn btn--primary btn--full ref-copy-button primary-share-button">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                                    Share Invitation
                                 </button>
+                                
+                                <div class="share-divider">
+                                    <span class="share-divider-text">or share via</span>
+                                </div>
+                                
+                                <div class="share-channels-grid">
+                                    <a id="share-sms" href="#" class="share-channel-btn sms-btn" aria-label="Share via Text Message">
+                                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                        <span>Text</span>
+                                    </a>
+                                    <a id="share-whatsapp" href="#" target="_blank" class="share-channel-btn whatsapp-btn" aria-label="Share via WhatsApp">
+                                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966a9.9 9.9 0 0 0-6.98-2.779c-5.443 0-9.87 4.372-9.875 9.802-.002 1.776.475 3.51 1.38 5.02l-.95 3.47 3.621-.95zM17.15 13.9c-.31-.156-1.832-.904-2.112-1.006-.28-.101-.484-.152-.688.156-.204.307-.79.997-.969 1.201-.178.205-.357.23-.667.074-1.282-.64-2.146-1.12-2.994-2.58-.225-.388.225-.36.643-1.196.07-.14.035-.264-.018-.368-.052-.104-.484-1.168-.663-1.603-.175-.421-.367-.363-.504-.37l-.429-.008c-.149 0-.39.056-.595.28-.204.225-.78.761-.78 1.855 0 1.095.8 2.152.91 2.302.113.15 1.573 2.4 3.809 3.367.532.229.946.367 1.268.47.534.17 1.021.146 1.405.088.429-.064 1.832-.75 2.087-1.474.254-.725.254-1.347.178-1.475-.077-.127-.282-.203-.591-.359z"/></svg>
+                                        <span>WhatsApp</span>
+                                    </a>
+                                    <a id="share-email" href="#" class="share-channel-btn email-btn" aria-label="Share via Email">
+                                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                        <span>Email</span>
+                                    </a>
+                                    <button id="share-copy" class="share-channel-btn copy-btn" aria-label="Copy Message to Clipboard">
+                                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
+
 
                         <!-- Card 2: Submit a Referral to claim reward -->
                         <div class="referral-card">
@@ -236,38 +250,107 @@
 
     <script src="../script.js"></script>
     <script>
-        // Interactive Message Generator JavaScript
         document.addEventListener('DOMContentLoaded', () => {
-            const nameInput = document.getElementById('referrer-name');
-            const previewText = document.getElementById('share-preview-text');
-            const copyBtn = document.getElementById('copy-message-btn');
+            const primaryShareBtn = document.getElementById('primary-share-btn');
+            const shareSMS = document.getElementById('share-sms');
+            const shareWhatsApp = document.getElementById('share-whatsapp');
+            const shareEmail = document.getElementById('share-email');
+            const shareCopy = document.getElementById('share-copy');
 
-            function updateMessage() {
-                const name = nameInput.value.trim();
-                const mentionText = name ? `mention my name (${name})` : 'mention my name';
-                previewText.value = `Hey! I highly recommend Scrubb ATX for cleaning services in Austin. They're eco-friendly, fully insured, and they guarantee their work. If you book and complete a Signature Deep Clean, ${mentionText} so I can earn a referral reward, and you can get a sparkling clean space!`;
+            const shareTitle = "Scrubb ATX Referral";
+            const shareText = "Hey! I highly recommend Scrubb ATX for cleaning services in Austin. They're eco-friendly, fully insured, and they guarantee their work. If you book a Signature Deep Clean, mention my name so I can earn a $50 cash referral reward! You'll get a pristine space too.";
+            const shareUrl = "https://scrubbatx.com/referrals/";
+
+            // Full message including link
+            const fullMessage = `${shareText} Book here: ${shareUrl}`;
+
+            // Set up sharing links
+            // WhatsApp
+            shareWhatsApp.href = `https://wa.me/?text=${encodeURIComponent(fullMessage)}`;
+            
+            // SMS (detect if iOS for correct separator)
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            const smsSeparator = isIOS ? '&' : '?';
+            shareSMS.href = `sms:${smsSeparator}body=${encodeURIComponent(fullMessage)}`;
+
+            // Email
+            shareEmail.href = `mailto:?subject=${encodeURIComponent(shareTitle)}&body=${encodeURIComponent(fullMessage)}`;
+
+            // Primary Share Button (uses Web Share API if available)
+            if (navigator.share) {
+                primaryShareBtn.addEventListener('click', async () => {
+                    try {
+                        await navigator.share({
+                            title: shareTitle,
+                            text: shareText,
+                            url: shareUrl
+                        });
+                    } catch (err) {
+                        if (err.name !== 'AbortError') {
+                            console.error('Error sharing:', err);
+                        }
+                    }
+                });
+            } else {
+                // If Web Share API is not supported (e.g. desktop Chrome/Firefox), 
+                // we change the primary button text and make it copy to clipboard.
+                primaryShareBtn.innerHTML = `
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy Referral Message
+                `;
+                
+                primaryShareBtn.addEventListener('click', async () => {
+                    await handleCopy();
+                });
             }
 
-            nameInput.addEventListener('input', updateMessage);
-
-            copyBtn.addEventListener('click', async () => {
+            // Copy to clipboard fallback
+            async function handleCopy() {
                 try {
-                    await navigator.clipboard.writeText(previewText.value);
-                    const originalText = copyBtn.innerHTML;
-                    copyBtn.innerHTML = `
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        Copied!
+                    await navigator.clipboard.writeText(fullMessage);
+                    
+                    // Visual feedback using the globally exposed showToast
+                    const showToastFunc = window.showToast || ((msg) => alert(msg));
+                    showToastFunc("Referral message copied to clipboard! Share it with your friends.");
+                    
+                    // Temporary button state change for copy button
+                    const originalCopyHTML = shareCopy.innerHTML;
+                    shareCopy.innerHTML = `
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Copied!</span>
                     `;
-                    copyBtn.style.background = '#8aa5cd';
-                    copyBtn.style.color = '#faf9f6';
+                    shareCopy.style.background = 'var(--blue-pale)';
+                    shareCopy.style.borderColor = 'var(--navy)';
+                    
                     setTimeout(() => {
-                        copyBtn.innerHTML = originalText;
-                        copyBtn.style.background = '';
-                        copyBtn.style.color = '';
+                        shareCopy.innerHTML = originalCopyHTML;
+                        shareCopy.style.background = '';
+                        shareCopy.style.borderColor = '';
                     }, 2500);
+
+                    // Also change primary share button if it acts as copy
+                    if (!navigator.share) {
+                        const originalBtnHTML = primaryShareBtn.innerHTML;
+                        primaryShareBtn.innerHTML = `
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Copied!
+                        `;
+                        primaryShareBtn.style.background = 'var(--blue)';
+                        primaryShareBtn.style.color = '#ffffff';
+                        setTimeout(() => {
+                            primaryShareBtn.innerHTML = originalBtnHTML;
+                            primaryShareBtn.style.background = '';
+                            primaryShareBtn.style.color = '';
+                        }, 2500);
+                    }
                 } catch (err) {
-                    console.error('Failed to copy text: ', err);
+                    console.error('Failed to copy text:', err);
                 }
+            }
+
+            shareCopy.addEventListener('click', async (e) => {
+                e.preventDefault();
+                await handleCopy();
             });
         });
     </script>

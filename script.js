@@ -236,6 +236,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 800);
         }, 4500);
     }
+    window.showToast = showToast;
+
 
     // ===== Subtle parallax on hero decorations =====
     const heroCircle = document.querySelector('.hero-decoration--circle');
