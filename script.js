@@ -147,56 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== Referral submission form (Web3Forms AJAX integration) =====
-    const referralForm = document.getElementById('referral-submit-form');
-    if (referralForm) {
-        referralForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const submitBtn = referralForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            
-            // Set loading state
-            submitBtn.textContent = 'Submitting...';
-            submitBtn.disabled = true;
-            
-            const formData = new FormData(referralForm);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
-            
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                const result = await response.json();
-                if (response.status === 200 && result.success) {
-                    // Success toast
-                    showToast("Referral submitted! We will track their booking and notify you.");
-                    referralForm.reset();
-                } else {
-                    // API error response
-                    console.error("Web3Forms Error:", result);
-                    showToast(result.message || "Something went wrong. Please try again.");
-                }
-            })
-            .catch(error => {
-                // Network/fetch error
-                console.error("Submission error:", error);
-                showToast("Network error. Please check your connection and try again.");
-            })
-            .finally(() => {
-                // Restore button state
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            });
-        });
-    }
-
     // ===== Toast Notification Helper =====
     function showToast(message) {
         // Check if container exists, otherwise create it
