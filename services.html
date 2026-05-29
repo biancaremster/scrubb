@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cleaning Services in Austin, TX | Scrubb ATX</title>
-    <meta name="description" content="Explore our professional cleaning services in Austin, TX. We offer standard cleaning, deep cleaning, move-in/out cleaning, and apartment cleaning. Book your clean today!">
+    <meta name="description" content="Explore our professional cleaning services in Austin, TX. We offer standard cleaning, deep cleaning, and move-in/out cleaning. Book your clean today!">
     
     <!-- Canonical -->
     <link rel="canonical" href="https://scrubbatx.com/services.html" />
@@ -12,7 +12,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cleaning Services in Austin, TX | Scrubb ATX" />
-    <meta property="og:description" content="Explore our professional cleaning services in Austin, TX. We offer standard cleaning, deep cleaning, move-in/out cleaning, and apartment cleaning." />
+    <meta property="og:description" content="Explore our professional cleaning services in Austin, TX. We offer standard cleaning, deep cleaning, and move-in/out cleaning." />
     <meta property="og:url" content="https://scrubbatx.com/services.html" />
     <meta property="og:image" content="https://i.imgur.com/PSdNNW8.png" />
     <meta property="og:site_name" content="Scrubb ATX" />
@@ -38,6 +38,9 @@
         .services-section { padding: 40px 0; }
         
         .service-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 20px; }
+        @media (min-width: 1024px) {
+            .service-detail-grid { grid-template-columns: repeat(3, 1fr); }
+        }
         .service-detail-card { padding: 24px; background: white; border-radius: 4px; border: 2px solid var(--charcoal); box-shadow: 8px 8px 0px rgba(44,44,44,1); transition: all 0.3s ease; }
         .service-detail-card:hover { transform: translateY(-3px); box-shadow: 10px 10px 0px var(--pink); }
         
@@ -162,18 +165,7 @@
                             <li>Window sill and track cleaning</li>
                         </ul>
                     </div>
-                    <div class="service-detail-card">
-                        <div class="service-icon"><svg class="cute-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></div>
-                        <h2>Apartment & Condo</h2>
-                        <p>Specialized service for Austin's urban dwellers. Efficient, thorough cleaning for smaller footprints with high-end finishes.</p>
-                        <ul class="service-features">
-                            <li>Balcony and patio sweeping</li>
-                            <li>Stainless steel appliance polishing</li>
-                            <li>Mirror and glass surface cleaning</li>
-                            <li>Upholstery vacuuming</li>
-                            <li>Scent-neutralizing refresh</li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -182,7 +174,7 @@
             <div class="container">
                 <div class="services-cta-inner">
                     <h2 class="services-cta-title">Ready for a<br><em>Sparkling Space?</em></h2>
-                    <p class="services-cta-body">Get your free, no-obligation quote today. We'll respond within 2 hours.</p>
+                    <p class="services-cta-body">Get your free, no-obligation quote today. We'll respond promptly.</p>
                     <div class="services-cta-actions">
                         <a href="index.html#contact" class="btn btn--primary">Get a Free Quote →</a>
                         <a href="tel:+15129620744" class="btn btn--ghost">Or Call (512) 962-0744</a>
@@ -223,7 +215,10 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Scrubb ATX. All rights reserved.</p>
+                <div class="footer-bottom-left">
+                    <p>&copy; 2026 Scrubb ATX. All rights reserved.</p>
+                    <p class="footer-als">Scrubb ATX is a proud supporter of the ALS Association — $2 of every clean is donated to the cause.</p>
+                </div>
             </div>
         </div>
     </footer>
