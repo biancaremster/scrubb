@@ -209,40 +209,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatIconOpen  = document.getElementById('chat-icon-open');
     const chatIconClose = document.getElementById('chat-icon-close');
 
-    let chatOpen = false;
-    let autoShownOnce = false;
+    if (chatButton && chatPopup && chatClose && chatIconOpen && chatIconClose) {
+        let chatOpen = false;
+        let autoShownOnce = false;
 
-    function openChat() {
-        chatOpen = true;
-        chatPopup.classList.add('chat-popup--visible');
-        chatButton.classList.add('is-open');
-        chatButton.setAttribute('aria-expanded', 'true');
-        chatIconOpen.style.display  = 'none';
-        chatIconClose.style.display = 'block';
-    }
-
-    function closeChat() {
-        chatOpen = false;
-        chatPopup.classList.remove('chat-popup--visible');
-        chatButton.classList.remove('is-open');
-        chatButton.setAttribute('aria-expanded', 'false');
-        chatIconOpen.style.display  = 'block';
-        chatIconClose.style.display = 'none';
-    }
-
-    chatButton.addEventListener('click', () => {
-        chatOpen ? closeChat() : openChat();
-    });
-
-    chatClose.addEventListener('click', () => closeChat());
-
-    // Auto-show the popup once after 4 seconds (only on desktop/tablets > 768px)
-    setTimeout(() => {
-        if (window.innerWidth > 768 && !autoShownOnce && !chatOpen) {
-            autoShownOnce = true;
-            openChat();
-            // Auto-dismiss after 8 more seconds if the user ignores it
-            setTimeout(() => { if (chatOpen) closeChat(); }, 8000);
+        function openChat() {
+            chatOpen = true;
+            chatPopup.classList.add('chat-popup--visible');
+            chatButton.classList.add('is-open');
+            chatButton.setAttribute('aria-expanded', 'true');
+            chatIconOpen.style.display  = 'none';
+            chatIconClose.style.display = 'block';
         }
-    }, 4000);
+
+        function closeChat() {
+            chatOpen = false;
+            chatPopup.classList.remove('chat-popup--visible');
+            chatButton.classList.remove('is-open');
+            chatButton.setAttribute('aria-expanded', 'false');
+            chatIconOpen.style.display  = 'block';
+            chatIconClose.style.display = 'none';
+        }
+
+        chatButton.addEventListener('click', () => {
+            chatOpen ? closeChat() : openChat();
+        });
+
+        chatClose.addEventListener('click', () => closeChat());
+
+        // Auto-show the popup once after 4 seconds (only on desktop/tablets > 768px)
+        setTimeout(() => {
+            if (window.innerWidth > 768 && !autoShownOnce && !chatOpen) {
+                autoShownOnce = true;
+                openChat();
+                // Auto-dismiss after 8 more seconds if the user ignores it
+                setTimeout(() => { if (chatOpen) closeChat(); }, 8000);
+            }
+        }, 4000);
+    }
 });

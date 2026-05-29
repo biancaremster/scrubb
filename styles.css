@@ -291,6 +291,17 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     transition: opacity 0.3s var(--ease), transform 0.3s var(--ease-bounce);
     border: 2px solid var(--charcoal);
 }
+.chat-popup-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+.chat-popup-link:hover .chat-avatar-wrapper {
+    transform: rotate(5deg) scale(1.08);
+}
 .chat-popup--visible {
     opacity: 1; pointer-events: all;
     transform: translateY(0) scale(1);
