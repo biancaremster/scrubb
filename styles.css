@@ -527,23 +527,30 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .widget-fallback-link {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    margin-top: 10px;
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.45);
+    gap: 8px;
+    margin-top: 18px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: all 0.25s var(--ease);
     align-self: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .widget-fallback-link svg {
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
     flex-shrink: 0;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 .widget-fallback-link:hover {
-    color: rgba(255,255,255,0.8);
-    text-decoration: underline;
+    color: var(--cream);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
 }
 .form-group { margin-bottom: 20px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
