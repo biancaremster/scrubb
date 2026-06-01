@@ -508,25 +508,21 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .contact-title em { font-family: var(--font-accent); color: var(--pink-light); }
 .contact-body { color: rgba(255,255,255,0.6); font-size: 1.05rem; }
 .booking-widget-container {
-    width: calc(100% - 8px);
-    margin-right: 8px;
-    margin-bottom: 8px;
+    width: 100%;
     background: var(--cream);
     border: 2px solid var(--charcoal);
     border-radius: 4px;
     box-shadow: 8px 8px 0px rgba(44, 44, 44, 1);
     overflow: hidden;
-    min-height: 750px;
+    min-height: 700px;
     display: flex;
     flex-direction: column;
 }
 .booking-widget-container iframe {
-    width: 1px !important;
-    min-width: 100% !important;
-    min-height: 750px;
+    width: 100% !important;
+    min-height: 700px;
     border: none !important;
     background: var(--cream);
-    display: block;
 }
 .form-group { margin-bottom: 20px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -657,7 +653,6 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     .hero-form-card { padding: 28px; }
     .feature { padding: 20px; gap: 16px; }
     .referral-card { padding: 32px 24px; }
-    .booking-widget-container, .booking-widget-container iframe { min-height: 800px; }
 }
 
 @media (max-width: 480px) {
@@ -667,7 +662,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
     .contact-title { font-size: 1.9rem; }
     .area-chip { padding: 6px 12px; font-size: 0.78rem; }
     .feature { padding: 16px; gap: 12px; }
-    .booking-widget-container, .booking-widget-container iframe { min-height: 850px; }
+    .booking-widget-container, .booking-widget-container iframe { min-height: 550px; }
     .chat-widget { bottom: 16px; right: 16px; }
     .chat-popup { max-width: 250px; padding: 12px 28px 12px 12px; font-size: 0.8rem; }
     .chat-button { width: 48px; height: 48px; }
