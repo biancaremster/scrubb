@@ -54,7 +54,7 @@
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-            <a href="#contact" id="header-cta" class="header-cta">Book a Clean</a>
+            <a href="#booking" id="header-cta" class="header-cta">Book a Clean</a>
             <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -70,7 +70,7 @@
             <li><a href="#service-areas" class="mobile-nav-link">Areas</a></li>
             <li><a href="referrals" class="mobile-nav-link">Referrals</a></li>
             <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-            <li><a href="#contact" class="mobile-nav-link cta">Book a Clean</a></li>
+            <li><a href="#booking" class="mobile-nav-link cta">Book a Clean</a></li>
         </ul>
     </div>
 
@@ -128,18 +128,8 @@
                                     <input type="text" id="lead-first-name" name="first_name" class="lead-input" placeholder="First Name" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="lead-last-name" class="lead-label">Last Name <span class="required">*</span></label>
-                                    <input type="text" id="lead-last-name" name="last_name" class="lead-input" placeholder="Last Name" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="lead-phone" class="lead-label">Phone Number <span class="required">*</span></label>
-                                    <input type="tel" id="lead-phone" name="phone" class="lead-input" placeholder="Phone Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lead-email" class="lead-label">Email</label>
-                                    <input type="email" id="lead-email" name="email" class="lead-input" placeholder="Email Address">
+                                    <label for="lead-email" class="lead-label">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="lead-email" name="email" class="lead-input" placeholder="Email Address" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -365,8 +355,8 @@
             </div>
         </section>
 
-        <!-- CTA / Contact Section -->
-        <section id="contact" class="contact">
+        <!-- CTA / Booking Section -->
+        <section id="booking" class="contact">
             <div class="bg-decoration bg-decoration--dots" style="top: 10%; left: 5%; width: 450px; height: 450px; opacity: 0.35;" aria-hidden="true"></div>
             <div class="contact-decoration contact-decoration--left" aria-hidden="true"></div>
             <div class="contact-decoration contact-decoration--right" aria-hidden="true"></div>
@@ -383,6 +373,23 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                         Not loading? Click here to book directly
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section id="contact" class="contact-info-section" style="padding: 60px 0; background: var(--blue-pale); border-top: 2px solid var(--charcoal); text-align: center; position: relative; overflow: hidden;">
+            <div class="bg-decoration bg-decoration--dots" style="top: 10%; left: 5%; width: 200px; height: 200px; opacity: 0.3;" aria-hidden="true"></div>
+            <div class="container">
+                <h2 style="font-family: var(--font-display); font-size: clamp(1.8rem, 4vw + 0.8rem, 2.5rem); color: var(--charcoal); margin-bottom: 8px;">Have any other questions?</h2>
+                <p style="font-family: var(--font-accent); font-style: italic; font-size: 2rem; color: var(--pink); margin-bottom: 24px; font-weight: 400;">Reach out!</p>
+                <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; font-size: 1.2rem; font-weight: 700; color: var(--charcoal);">
+                    <div>
+                        Call or Text: <a href="tel:+15129620744" style="color: var(--blue); text-decoration: underline;">(512) 962-0744</a>
+                    </div>
+                    <div>
+                        Email: <a href="mailto:hello@scrubbatx.com" style="color: var(--blue); text-decoration: underline;">hello@scrubbatx.com</a>
+                    </div>
                 </div>
             </div>
         </section>
