@@ -30,30 +30,12 @@
         .page-subtitle { font-size: 1.1rem; color: var(--slate); max-width: 600px; margin: 0 auto; }
         .services-section { padding: 40px 0; }
         
-        .service-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 20px; }
-        .service-detail-card { padding: 24px; background: white; border-radius: 4px; border: 2px solid var(--charcoal); box-shadow: 8px 8px 0px rgba(44,44,44,1); transition: all 0.3s ease; }
-        .service-detail-card:hover { transform: translateY(-3px); box-shadow: 10px 10px 0px var(--pink); }
-        
-        .service-icon { 
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 60px; height: 60px; margin-bottom: 16px;
-            background: var(--pink-pale); border-radius: 50%;
-            border: 2px solid var(--charcoal); box-shadow: 3px 3px 0px rgba(44,44,44,1);
-            color: var(--pink); transition: all 0.3s var(--ease);
-        }
-        .service-detail-card:hover .service-icon { transform: rotate(-10deg) scale(1.1); box-shadow: 5px 5px 0px var(--charcoal); background: white; }
-        .service-icon svg { width: 30px; height: 30px; }
-        
-        .service-detail-card h2 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 12px; color: var(--charcoal); }
-        .service-detail-card p { color: var(--slate); line-height: 1.6; margin-bottom: 16px; font-size: 0.95rem; }
-        
-        .service-features { list-style: none; padding: 0; }
-        .service-features li { padding: 6px 0; display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--charcoal); font-weight: 500; }
-        .service-features li::before { content: '★'; color: var(--pink); font-size: 1rem; }
-        
-        @media (max-width: 768px) {
-            .service-detail-grid { grid-template-columns: 1fr; }
-        }
+        .checklist-condensed { max-width: 700px; margin: 0 auto; background: white; border: 2px solid var(--charcoal); border-radius: 4px; box-shadow: 8px 8px 0px rgba(44,44,44,1); overflow: hidden; }
+        .checklist-room { padding: 20px 24px; border-bottom: 1px solid rgba(44,44,44,0.12); }
+        .checklist-room:last-child { border-bottom: none; }
+        .checklist-room-name { font-family: var(--font-display); font-size: 1rem; color: var(--charcoal); margin-bottom: 8px; letter-spacing: 0.04em; }
+        .checklist-items { color: var(--slate); font-size: 0.92rem; line-height: 1.9; font-weight: 500; }
+        .checklist-sep { color: var(--pink); margin: 0 5px; font-weight: 700; }
 
         .services-cta { padding: 60px 0 100px; }
         .services-cta-inner { background: var(--pink-light); padding: clamp(30px, 8vw, 60px) clamp(20px, 5vw, 40px); border: 2px solid var(--charcoal); box-shadow: 8px 8px 0px rgba(44,44,44,1); border-radius: 4px; text-align: center; }
@@ -129,63 +111,27 @@
 
         <section class="services-section">
             <div class="container">
-                <div style="text-align: center; max-width: 800px; margin: 0 auto 60px; padding: 0 16px;">
-                    <h2 style="font-family: var(--font-display); font-size: clamp(1.8rem, 4vw + 0.8rem, 2.5rem); color: var(--charcoal); margin-bottom: 20px; line-height: 1.2;">The Ultimate Move-Out Checklist</h2>
-                    <p style="color: var(--slate); font-size: 1.1rem; line-height: 1.6;">Our comprehensive apartment move-out cleaning covers every detail property managers look for during final inspections. We clean top to bottom, ensuring nothing is missed.</p>
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 40px;">
+                    <h2 style="font-family: var(--font-display); font-size: clamp(1.8rem, 4vw + 0.8rem, 2.5rem); color: var(--charcoal); margin-bottom: 12px; line-height: 1.2;">What's Included</h2>
+                    <p style="color: var(--slate); font-size: 1.05rem;">Everything property managers look for, covered.</p>
                 </div>
-                
-                <div class="service-detail-grid">
-                    <div class="service-detail-card">
-                        <div class="service-icon"><svg class="cute-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="6"></circle></svg></div>
-                        <h2>Kitchen Deep Clean</h2>
-                        <p>We tackle the toughest grease and grime so your appliances and cabinets look like new.</p>
-                        <ul class="service-features">
-                            <li>Clean interiors of cabinets, drawers, & pantry</li>
-                            <li>Inside Fridge</li>
-                            <li>Inside Freezer</li>
-                            <li>Interior microwave</li>
-                            <li>Oven deep clean</li>
-                            <li>Sanitizing countertops & sinks</li>
-                            <li>Polishing stainless steel appliances</li>
-                        </ul>
+
+                <div class="checklist-condensed">
+                    <div class="checklist-room">
+                        <h3 class="checklist-room-name">Kitchen</h3>
+                        <p class="checklist-items">Interior cabinets, drawers & pantry<span class="checklist-sep">·</span>Inside fridge & freezer<span class="checklist-sep">·</span>Interior microwave<span class="checklist-sep">·</span>Oven deep clean<span class="checklist-sep">·</span>Sanitize counters & sink<span class="checklist-sep">·</span>Polish appliances</p>
                     </div>
-                    <div class="service-detail-card">
-                        <div class="service-icon"><svg class="cute-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></div>
-                        <h2>Bathroom Scrub-Down</h2>
-                        <p>Eliminate soap scum, mildew, and hard water stains for a pristine bathroom space.</p>
-                        <ul class="service-features">
-                            <li>Intensive tub & shower scrubbing</li>
-                            <li>Toilet sanitization inside & out</li>
-                            <li>Mirror & glass polishing</li>
-                            <li>Cabinet & drawer interior wipe-down</li>
-                            <li>Grout and tile detail cleaning</li>
-                        </ul>
+                    <div class="checklist-room">
+                        <h3 class="checklist-room-name">Bathroom</h3>
+                        <p class="checklist-items">Intensive tub & shower scrub<span class="checklist-sep">·</span>Toilet sanitization<span class="checklist-sep">·</span>Mirror & glass polish<span class="checklist-sep">·</span>Cabinet & drawer interiors<span class="checklist-sep">·</span>Grout & tile detail</p>
                     </div>
-                    <div class="service-detail-card">
-                        <div class="service-icon"><svg class="cute-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg></div>
-                        <h2>Living Areas & Bedrooms</h2>
-                        <p>We remove the dust and dirt left behind after the furniture is gone.</p>
-                        <ul class="service-features">
-                            <li>Interior windows cleaned</li>
-                            <li>Wipe down walls (spot cleaning)</li>
-                            <li>Thorough vacuuming of all carpets</li>
-                            <li>Hard floor sweeping & mopping</li>
-                            <li>Baseboard dusting & wiping</li>
-                            <li>Cleaning ceiling fans & fixtures</li>
-                            <li>Window sill and blind dusting</li>
-                        </ul>
+                    <div class="checklist-room">
+                        <h3 class="checklist-room-name">Living Areas & Bedrooms</h3>
+                        <p class="checklist-items">Interior windows<span class="checklist-sep">·</span>Wall spot cleaning<span class="checklist-sep">·</span>Vacuum carpets<span class="checklist-sep">·</span>Sweep & mop hard floors<span class="checklist-sep">·</span>Baseboards<span class="checklist-sep">·</span>Ceiling fans & fixtures<span class="checklist-sep">·</span>Window sills & blinds</p>
                     </div>
-                    <div class="service-detail-card">
-                        <div class="service-icon"><svg class="cute-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg></div>
-                        <h2>Doors & Details</h2>
-                        <p>It's the little things that property managers check. We make sure they shine.</p>
-                        <ul class="service-features">
-                            <li>Wiping down doors & door frames</li>
-                            <li>Cleaning light switches & outlets</li>
-                            <li>Removing cobwebs from corners</li>
-                            <li>Trash & debris removal</li>
-                            <li>Balcony/patio sweeping (if applicable)</li>
-                        </ul>
+                    <div class="checklist-room">
+                        <h3 class="checklist-room-name">Doors & Details</h3>
+                        <p class="checklist-items">Doors & door frames<span class="checklist-sep">·</span>Light switches & outlets<span class="checklist-sep">·</span>Cobweb removal<span class="checklist-sep">·</span>Trash & debris<span class="checklist-sep">·</span>Balcony/patio sweep</p>
                     </div>
                 </div>
             </div>
