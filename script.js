@@ -247,4 +247,68 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 4000);
     }
+
+    // ===== Image Carousel =====
+    const carousel = document.querySelector('.carousel-container');
+    if (carousel) {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const indicators = carousel.querySelectorAll('.indicator');
+        const prevBtn = carousel.querySelector('.prev-btn');
+        const nextBtn = carousel.querySelector('.next-btn');
+        
+        let currentIndex = 0;
+        let slideInterval;
+        const intervalTime = 4000;
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(ind => ind.classList.remove('active'));
+            
+            currentIndex = (index + slides.length) % slides.length;
+            
+            slides[currentIndex].classList.add('active');
+            indicators[currentIndex].classList.add('active');
+        }
+        
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+        
+        function startAutoPlay() {
+            stopAutoPlay();
+            slideInterval = setInterval(nextSlide, intervalTime);
+        }
+        
+        function stopAutoPlay() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+            }
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            startAutoPlay();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            startAutoPlay();
+        });
+        
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                showSlide(index);
+                startAutoPlay();
+            });
+        });
+        
+        carousel.addEventListener('mouseenter', stopAutoPlay);
+        carousel.addEventListener('mouseleave', startAutoPlay);
+        
+        startAutoPlay();
+    }
 });

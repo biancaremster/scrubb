@@ -153,8 +153,33 @@
                 </div>
                 <div class="about-grid">
                     <div class="about-image-wrapper anim-fade-in-right" style="--delay: 0.1s">
-                        <div class="about-image">
-                            <img src="kitchen.png" alt="Pristine clean kitchen" loading="lazy">
+                        <div class="about-image carousel-container">
+                            <div class="carousel-slides">
+                                <div class="carousel-slide active">
+                                    <img src="https://i.imgur.com/r7UDAt3.jpg" alt="Pristine clean living space" loading="lazy">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://i.imgur.com/PTGj91s.jpg" alt="Spotless modern kitchen" loading="lazy">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://i.imgur.com/L94LFas.jpg" alt="Organized bedroom" loading="lazy">
+                                </div>
+                            </div>
+                            
+                            <!-- Carousel Controls -->
+                            <button class="carousel-btn prev-btn" aria-label="Previous image">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            </button>
+                            <button class="carousel-btn next-btn" aria-label="Next image">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </button>
+                            
+                            <!-- Carousel Indicators -->
+                            <div class="carousel-indicators">
+                                <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+                                <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
+                                <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
+                            </div>
                         </div>
                     </div>
                     <div class="about-features anim-fade-up" style="--delay: 0.2s">
