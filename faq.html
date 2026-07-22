@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2c2c2c">
     <title>Frequently Asked Questions | Scrubb ATX — Austin, TX</title>
     <meta name="description" content="Have questions about our cleaning services in Austin? Find answers about pricing, service areas, cleaning products, and booking.">
     
     <!-- Canonical -->
-    <link rel="canonical" href="https://scrubbatx.com/faq.html" />
+    <link rel="canonical" href="https://scrubbatx.com/faq" />
+
+        <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Frequently Asked Questions | Scrubb ATX" />
+    <meta name="twitter:description" content="Have questions about our cleaning services in Austin? Find answers about pricing, service areas, cleaning products, and booking." />
+    <meta name="twitter:image" content="https://i.imgur.com/PSdNNW8.png" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Frequently Asked Questions | Scrubb ATX" />
     <meta property="og:description" content="Have questions about our cleaning services in Austin? Find answers about pricing, service areas, cleaning products, and booking." />
-    <meta property="og:url" content="https://scrubbatx.com/faq.html" />
+    <meta property="og:url" content="https://scrubbatx.com/faq" />
     <meta property="og:image" content="https://i.imgur.com/PSdNNW8.png" />
     <meta property="og:site_name" content="Scrubb ATX" />
 
@@ -32,24 +39,111 @@
         .faq-category-title { font-family: var(--font-display); font-size: 2rem; margin: 60px 0 30px; text-align: center; color: var(--charcoal); }
         .faq-category-title:first-child { margin-top: 0; }
     </style>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does house cleaning cost in Austin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pricing is based on the square footage of your home and the type of cleaning needed. Standard cleanings typically range from $140 to $260. Deep cleanings and move-out cleanings are priced higher due to the extra time and detail required. Contact us for a free estimate!"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in a standard clean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our standard clean covers all main living areas, including dusting reachable surfaces, vacuuming/mopping floors, cleaning kitchen counters and appliance exteriors, and sanitizing bathrooms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes the \"Signature Deep Clean\" different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Signature Deep Clean includes everything in a standard clean plus hand-wiping baseboards, cleaning inside the microwave and oven, dusting ceiling fans/light fixtures, and deep scrubbing all tile grout and shower areas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your cleaners background-checked and insured?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every Scrubb ATX professional is background-checked, bonded, and fully insured for your peace of mind. We take the security of your home very seriously."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your cleaning products safe for pets and children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We use non-toxic, eco-friendly cleaning agents that are safe for pets, children, and the environment while still being incredibly effective."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far in advance do I need to book?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We typically recommend booking 3-7 days in advance, but we often have same-week availability. For move-out cleanings, booking 2 weeks in advance is recommended during peak moving seasons in Austin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to be home during the cleaning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, you do not need to be home. Most of our clients provide a key or entry code. If you prefer to be home, that's fine too!"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your air conditioning (A/C) policy during hot months?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Air conditioning must be turned on and running at a comfortable temperature during hot summer months while our cleaning team is working in your home. Working in unconditioned high temperatures poses safety risks for our staff and impairs cleaning performance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your cancellation policy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We require at least two days (48 hours) prior notice for any cancellations or rescheduling. If you cancel or reschedule less than two days before your scheduled appointment, we will keep your deposit."
+          }
+        }
+      ]
+    }
+    </script>
+
+
+    <!-- Favicon & Web Manifest -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
     <div class="grain-overlay" aria-hidden="true"></div>
     <header id="site-header" class="site-header">
         <div class="container header-flex">
-            <a href="index.html" id="logo-link" class="logo-link" aria-label="Scrubb ATX Home">
+            <a href="/" id="logo-link" class="logo-link" aria-label="Scrubb ATX Home">
                 <img src="https://i.imgur.com/PSdNNW8.png" alt="Scrubb ATX" class="logo-img">
             </a>
             <nav class="main-nav" aria-label="Main navigation">
                 <ul class="nav-list">
-                    <li><a href="index.html#about" class="nav-link">About</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="index.html#service-areas" class="nav-link">Areas</a></li>
+                    <li><a href="/#about" class="nav-link">About</a></li>
+                    <li><a href="services" class="nav-link">Services</a></li>
+                    <li><a href="/#service-areas" class="nav-link">Areas</a></li>
                     <li><a href="referrals" class="nav-link">Referrals</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-            <a href="index.html#booking" id="header-cta" class="header-cta">Book a Clean</a>
+            <a href="/#booking" id="header-cta" class="header-cta">Book a Clean</a>
             <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -61,12 +155,12 @@
     <!-- Mobile Nav Overlay -->
     <div id="mobile-nav" class="mobile-nav">
         <ul class="mobile-nav-list">
-            <li><a href="index.html#about" class="mobile-nav-link">About</a></li>
-            <li><a href="services.html" class="mobile-nav-link">Services</a></li>
-            <li><a href="index.html#service-areas" class="mobile-nav-link">Areas</a></li>
+            <li><a href="/#about" class="mobile-nav-link">About</a></li>
+            <li><a href="services" class="mobile-nav-link">Services</a></li>
+            <li><a href="/#service-areas" class="mobile-nav-link">Areas</a></li>
             <li><a href="referrals" class="mobile-nav-link">Referrals</a></li>
             <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-            <li><a href="index.html#booking" class="mobile-nav-link cta">Book a Clean</a></li>
+            <li><a href="/#booking" class="mobile-nav-link cta">Book a Clean</a></li>
         </ul>
     </div>
 
@@ -99,7 +193,7 @@
                     <details class="faq-details">
                         <summary class="faq-summary">What is included in a standard clean?</summary>
                         <div class="faq-content">
-                            Our standard clean covers all main living areas, including dusting reachable surfaces, vacuuming/mopping floors, cleaning kitchen counters and appliance exteriors, and sanitizing bathrooms. You can view our complete room-by-room <a href="standard-house-cleaning.html" style="color: var(--blue); text-decoration: underline; font-weight: 600;">Standard House Cleaning Checklist</a> to see exactly what we clean.
+                            Our standard clean covers all main living areas, including dusting reachable surfaces, vacuuming/mopping floors, cleaning kitchen counters and appliance exteriors, and sanitizing bathrooms. You can view our complete room-by-room <a href="standard-house-cleaning" style="color: var(--blue); text-decoration: underline; font-weight: 600;">Standard House Cleaning Checklist</a> to see exactly what we clean.
                         </div>
                     </details>
                     <details class="faq-details">
@@ -178,7 +272,7 @@
                     <address class="footer-nap">
                         <strong>Scrubb ATX</strong><br>
                         Austin, TX<br>
-                        <a href="tel:+15125550123">(512) 555-0123</a><br>
+                        <a href="tel:+15129620744">(512) 962-0744</a><br>
                         <a href="mailto:hello@scrubbatx.com">hello@scrubbatx.com</a>
                     </address>
                 </div>
@@ -186,15 +280,15 @@
                     <div class="footer-col">
                         <h4 class="footer-heading">Company</h4>
                         <ul class="footer-list">
-                            <li><a href="index.html#about">About Us</a></li>
-                            <li><a href="index.html#service-areas">Service Areas</a></li>
+                            <li><a href="/#about">About Us</a></li>
+                            <li><a href="/#service-areas">Service Areas</a></li>
                             <li><a href="referrals">Referral Program</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h4 class="footer-heading">Support</h4>
                         <ul class="footer-list">
-                            <li><a href="index.html#contact">Contact</a></li>
+                            <li><a href="/#contact">Contact</a></li>
                             <li><a href="faq.html" class="active">FAQ</a></li>
                         </ul>
                     </div>

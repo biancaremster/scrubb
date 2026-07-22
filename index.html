@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2c2c2c">
     <title>Scrubb ATX | Cleaning Services in Austin, TX</title>
     <meta name="description" content="Professional house cleaning services in Austin, TX. Scrubb ATX is bonded, insured & eco-friendly. Serving 40+ Austin neighborhoods. Get a free quote today!">
     <!-- Canonical -->
@@ -14,6 +15,9 @@
     <meta property="og:description" content="Professional house cleaning services in Austin, TX. Scrubb ATX is bonded, insured & eco-friendly. Serving 40+ Austin neighborhoods. Get a free quote today!" />
     <meta property="og:url" content="https://scrubbatx.com/" />
     <meta property="og:image" content="https://i.imgur.com/PSdNNW8.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Scrubb ATX House Cleaning Services" />
     <meta property="og:site_name" content="Scrubb ATX" />
 
     <!-- Twitter Card -->
@@ -33,6 +37,10 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon & Web Manifest -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
 
@@ -48,7 +56,7 @@
             <nav class="main-nav" aria-label="Main navigation">
                 <ul class="nav-list">
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="services" class="nav-link">Services</a></li>
                     <li><a href="#service-areas" class="nav-link">Areas</a></li>
                     <li><a href="referrals" class="nav-link">Referrals</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -67,7 +75,7 @@
     <div id="mobile-nav" class="mobile-nav">
         <ul class="mobile-nav-list">
             <li><a href="#about" class="mobile-nav-link">About</a></li>
-            <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li><a href="services" class="mobile-nav-link">Services</a></li>
             <li><a href="#service-areas" class="mobile-nav-link">Areas</a></li>
             <li><a href="referrals" class="mobile-nav-link">Referrals</a></li>
             <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
@@ -449,7 +457,7 @@
                         <h4 class="footer-heading">Support</h4>
                         <ul class="footer-list">
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="faq">FAQ</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                         </ul>
                     </div>
@@ -494,12 +502,61 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["HouseCleaning", "LocalBusiness"],
       "name": "Scrubb ATX",
       "image": "https://i.imgur.com/PSdNNW8.png",
       "@id": "https://scrubbatx.com/",
       "url": "https://scrubbatx.com/",
       "telephone": "+1-512-962-0744",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "House Cleaning Services",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Standard Cleaning Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Standard House Cleaning",
+                  "description": "Regular maintenance cleaning covering dusting, vacuuming, mopping, kitchen surfaces, and bathroom sanitization."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Deep Cleaning Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Signature Deep Cleaning",
+                  "description": "Comprehensive top-to-bottom deep clean including baseboards, appliance interiors, and deep grout scrubbing."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Move-Out Cleaning Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Apartment Move-Out Cleaning",
+                  "description": "Detailed move-out cleaning tailored to fulfill lease requirements and secure security deposit refunds."
+                }
+              }
+            ]
+          }
+        ]
+      },
+
       "priceRange": "$$",
       "description": "Professional house cleaning services in Austin, TX. Bonded, insured, and eco-friendly.",
       "address": {
